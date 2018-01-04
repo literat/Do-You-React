@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/JSXTransformer.js"></script>
+</head>
+
+<body>
+
+<script type="text/jsx">
+    var Counter = React.createClass({
+        getInitialState: function() {
+            return {
+                count: 0
+            };
+        },
+
+        increment: function() {
+            this.setState({ count: this.state.count + 1 });
+        },
+
+        decrement: function() {
+            var count = this.state.count - 1;
+
+            if (count < 0) {
+                count = 0;
+            }
+            this.setState({ count: count });
+        },
+
+        render: function() {
+            return (
+                <div>
+                    <h1>Counter: {this.state.count}</h1>
+                    <button onClick={this.decrement}>-1</button>
+                    <button onClick={this.increment}>+1</button>
+                </div>
+            );
+        }
+
+    });
+
+    React.render(<Counter />, document.body);
+</script>
+
+</body>
+
+</html>
