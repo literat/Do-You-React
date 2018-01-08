@@ -29,3 +29,5 @@ var GistAddForm = React.createClass({
     }
 
 });
+
+export default GistAddForm;

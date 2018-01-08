@@ -9,3 +9,5 @@ var Gist = React.createClass({
     }
 
 });
+
+export default Gist;
